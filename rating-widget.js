@@ -93,7 +93,7 @@
                         </div>
                         <div class="modal-footer">
                             <p style="font-size:12px;">We're incredibly grateful for your high rating! Your support means the world to us. Please consider leaving a review on Google. Thank you once again!</p>
-                            <a href="${reviewUrl}" class="btn btn-dark d-flex flex-wrap align-items-center"><img src="search.png" style="width:25px; height:25px;">&nbsp;&nbsp;Write a review</a>
+                            <a href="${reviewUrl}" class="btn btn-dark d-flex flex-wrap align-items-center"><img src="https://raw.githubusercontent.com/jolenjolen/rating-widget/refs/heads/main/search.png" style="width:25px; height:25px;">&nbsp;&nbsp;Write a review</a>
                         </div>
                     </div>
                 </div>
