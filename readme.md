@@ -16,10 +16,22 @@ This project is a modular 5-star rating system built using **vanilla JavaScript*
 
 ## 🔧 How It Works
 
-### 1. Embed the Widget
+### Download the Above Files And Embed the Widget
 
 In your PHP page:
 
 ```php
 <div id="rating-widget-container" data-review-url="<?= htmlspecialchars('YOUR-GOOGLE-MAPS-REVIEW-LINK') ?>"></div>
 <script src="rating-widget.js"></script>
+```
+
+## -- OR --
+
+### Embed the Widget Without Any Installation
+
+In your PHP page:
+
+```php
+<div id="rating-widget-container" data-review-url="<?= htmlspecialchars('YOUR-GOOGLE-MAPS-REVIEW-LINK') ?>"></div>
+<script src="https://jolenjolen.github.io/rating-widget/rating-widget.js"></script>
+```
