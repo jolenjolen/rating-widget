@@ -25,7 +25,7 @@ In your PHP page:
 <script src="rating-widget.js"></script>
 ```
 
-## -- OR --
+## OR 
 
 ### Embed the Widget Without Any Installation
 
