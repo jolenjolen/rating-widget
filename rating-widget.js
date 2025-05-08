@@ -22,6 +22,8 @@
         const container = document.getElementById("rating-widget-container");
         if (!container) return;
         const reviewUrl = container.dataset.reviewUrl || "https://google.com";
+        const username = container.dataset.username || "anonymous";
+        const email = container.dataset.email || "unknown@example.com";
         // 3. Inject HTML
         container.innerHTML = `
             <style>
@@ -59,10 +61,14 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
-                            <form action="review.php">
+                            <form action="review.php" method="POST">
                                 <div class="mb-3 mt-3">
+                                    <input type="hidden" name="username" value="${username}">
+                                    <input type="hidden" name="email" value="${email}">
+                                    <input type="hidden" name="rating" class="rating-value" value="0">
+
                                     <label for="comment">Comments:</label>
-                                    <textarea class="form-control" rows="5" id="comment" name="text" required></textarea>
+                                    <textarea class="form-control" rows="5" id="text" name="text" required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-dark w-100">Submit</button>
                             </form>
@@ -83,10 +89,14 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
-                            <form action="review.php">
+                            <form action="review.php" method="POST">
                                 <div class="mb-3 mt-3">
+                                    <input type="hidden" name="username" value="${username}">
+                                    <input type="hidden" name="email" value="${email}">
+                                    <input type="hidden" name="rating" class="rating-value" value="0">
+
                                     <label for="comment">Comments:</label>
-                                    <textarea class="form-control" rows="5" id="comment" name="text" required></textarea>
+                                    <textarea class="form-control" rows="5" id="text" name="text" required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-dark w-100">Submit</button>
                             </form>
@@ -102,6 +112,7 @@
 
         // 4. Add JS interaction
         const stars = container.querySelectorAll(".star");
+        let selectedRating = 0;
         stars.forEach((star, i) => {
             star.addEventListener("mouseover", () => {
                 stars.forEach((s, j) => {
@@ -112,6 +123,12 @@
 
             star.addEventListener("mouseout", () => {
                 stars.forEach((s) => s.classList.remove("star-yes"));
+            });
+            star.addEventListener("click", () => {
+                selectedRating = i + 1;
+                const ratingInputs = container.querySelectorAll(".rating-value");
+                ratingInputs.forEach(input => input.value = selectedRating);
+
             });
         });
     });
