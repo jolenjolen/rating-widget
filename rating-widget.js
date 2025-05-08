@@ -61,7 +61,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
-                            <form action="https://jolen.me/review/review.php" method="POST">
+                            <form action="https://gateofgoa.com/review/review.php" method="POST">
                                 <div class="mb-3 mt-3">
                                     <input type="hidden" name="username" value="${username}">
                                     <input type="hidden" name="email" value="${email}">
@@ -89,7 +89,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
-                            <form action="https://jolen.me/review/review.php" method="POST">
+                            <form action="https://gateofgoa.com/review/review.php" method="POST">
                                 <div class="mb-3 mt-3">
                                     <input type="hidden" name="username" value="${username}">
                                     <input type="hidden" name="email" value="${email}">
